@@ -1,0 +1,30 @@
+@import "tailwindcss";
+
+html, body, #root { height: 100%; }
+body { background:#000; color:#fff; overflow:hidden }
+
+/* Overlay de transition (slide + fade in) */
+.page-transition{
+  position: fixed; inset: 0;
+  background-size: cover; background-position: center;
+  transform: translateX(-100%); opacity: 0;
+  animation: slideInFade .35s cubic-bezier(.2,.6,.2,1) forwards;
+  pointer-events: none; z-index: 1000;
+}
+@keyframes slideInFade { to { transform: translateX(0); opacity: 1; } }
+
+/* ➜ Fade-out pour la page d'arrivée */
+@keyframes fadeOutOverlay { to { opacity: 0; } }
+
+/* === Movie ribbon (gauche) === */
+
+/* forme du ruban (triangle/diagonale) ; ajuste les % si tu veux une autre pente/largeur */
+.movie-clip{
+  clip-path: polygon(0% 0%, 78% 0%, 50% 100%, 0% 100%);
+}
+
+/* si tu veux zéro mouvement, ne mets aucune anim */
+.movie-bg-anim{ animation: none; }  /* <- stop mouvement */
+.movie-vignette-left{
+  background: linear-gradient(90deg, rgba(0,0,0,.35) 0%, rgba(0,0,0,.28) 55%, rgba(0,0,0,0) 100%);
+}
