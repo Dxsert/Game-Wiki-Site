@@ -95,17 +95,19 @@ export default function Home() {
         {games.map((g, i) => {
           const dist = i - index;
 
-          // Écart réduit : B à 45% (au-dessus), A à 55% (en dessous)
+          // ✅ Nouvelle logique d’empilement
           let pos = "";
           if (dist === 0) {
-            pos = "top-1/2 -translate-y-1/2 opacity-100 z-30 scale-100";
+            pos = "top-1/2 -translate-y-1/2 opacity-100 z-40 scale-100";
           } else if (dist === -1) {
-            pos = "top-[45%] -translate-y-1/2 opacity-70 z-20 scale-[.985]";
+            pos =
+              "top-[calc(50%-8vh)] -translate-y-1/2 opacity-85 z-20 scale-[.985]";
           } else if (dist === 1) {
-            pos = "top-[55%] -translate-y-1/2 opacity-70 z-20 scale-[.985]";
+            pos =
+              "top-[calc(50%+8vh)] -translate-y-1/2 opacity-85 z-20 scale-[.985]";
           } else {
             pos =
-              "top-1/2 -translate-y-1/2 opacity-0 z-0 scale-90 pointer-events-none";
+              "top-1/2 -translate-y-1/2 opacity-60 z-10 scale-95 pointer-events-none";
           }
 
           return (
@@ -129,7 +131,7 @@ export default function Home() {
                     {g.routes.map((r) => (
                       <button
                         key={r.slug}
-                        onClick={() => navigate(`/wiki/${r.slug}`)}
+                        onClick={() => navigate(`/${r.slug}`)}
                         className="rounded-full border border-neutral-600 bg-neutral-800 px-4 py-1.5 text-sm font-medium text-neutral-100 hover:bg-neutral-700"
                       >
                         {r.label}

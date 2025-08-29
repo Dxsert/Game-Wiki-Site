@@ -4,15 +4,19 @@ export default function GameCard({ game, distance }) {
   const navigate = useNavigate();
   const ACTIVE = distance === 0;
 
+  // Nouvelle logique de placement : l’active devant (z-40),
+  // les voisines juste derrière et légèrement décalées,
+  // les plus lointaines encore plus petites et derrière.
   const pos = (() => {
-    if (distance === 0) return "translate-y-[-50%] scale-100 opacity-100 z-30";
+    if (distance === 0)
+      return "z-40 translate-y-[-50%] scale-100 opacity-100";
     if (distance === -1)
-      return "translate-y-[calc(-50%-24vh)] scale-[0.97] opacity-80 z-20";
+      return "z-20 translate-y-[calc(-50%-8vh)] scale-[0.985] opacity-85";
     if (distance === 1)
-      return "translate-y-[calc(-50%+24vh)] scale-[0.97] opacity-80 z-20";
+      return "z-20 translate-y-[calc(-50%+8vh)] scale-[0.985] opacity-85";
     if (distance <= -2)
-      return "translate-y-[calc(-50%-44vh)] scale-[0.93] opacity-60 z-10";
-    return "translate-y-[calc(-50%+44vh)] scale-[0.93] opacity-60 z-10";
+      return "z-10 translate-y-[calc(-50%-18vh)] scale-[0.95] opacity-60";
+    return "z-10 translate-y-[calc(-50%+18vh)] scale-[0.95] opacity-60";
   })();
 
   const PLACEHOLDER =
@@ -74,7 +78,9 @@ export default function GameCard({ game, distance }) {
 
   return (
     <section
-      className={`absolute left-0 right-0 top-1/2 transition-all duration-500 ease-[cubic-bezier(.2,.6,.2,1)] ${pos}`}
+      className={`absolute left-0 right-0 top-1/2 transition-all duration-500 ease-[cubic-bezier(.2,.6,.2,1)] ${pos} ${
+        ACTIVE ? "" : "pointer-events-none"
+      }`}
     >
       {/* largeur/contours de la grande carte */}
       <div className="mx-auto w-[min(1120px,calc(100vw-360px))] md:w-[min(1120px,calc(100vw-360px))] sm:w-[min(1120px,calc(100vw-24px))] rounded-2xl border border-neutral-800 bg-[#0f0f0f] p-4 pb-3 shadow-[0_16px_36px_rgba(0,0,0,.35)]">

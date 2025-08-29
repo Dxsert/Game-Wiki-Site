@@ -280,9 +280,37 @@ const ZZZ_OVERRIDES = {
         desc: [
           "Appuyez sur",
           { type: "icon", name: "basicattack" },
-          "pendant une esquive pour lancer une frappe rapide vers les ennemis en face, leur infligeant des <span style'color:#f2b600'>**DGT physiques**</span>.",
+          "pendant une esquive pour lancer une frappe rapide vers les ennemis en face, leur infligeant des <span style='color:#f2b600'>**DGT physiques**</span>.",
         ],
       },
+      {
+        name: "Contre d'esquive - L'heure des représailles a sonné !",
+        desc: [
+          "Appuyez sur",
+          { type: "icon", name: "basicattack" },
+          "lors d’une esquive parfaite pour enchaîner avec une frappe rapide infligeant des <span style='color:#f2b600'>**DGT physiques**</span>." +
+            "\n**[Le personnages est invulnérable pendant l'utilisation]**",
+        ],
+      },
+      {
+        name: "Soutien rapide - Un petit dessert ?",
+        desc: [
+          "Lorsque le personnage contrôlé est projeté, appuyez sur",
+          {type: "icon", name: "assist"},
+          "pour enchaîner sur avec une frappe infligeant des <span style='color:#f2b600'>**DGT physiques**</span>."+
+          "\n**[Le personnages est invulnérable pendant l'utilisation]**"
+        ]
+      },
+      {
+        name: "Soutien défensif - Le plein de rigolade",
+        desc: [
+          "Lorsque le personnage sur le terrain est sur le point d'être attaqué, appuyez sur",
+          {type: "icon", name: "assist"},
+          "pour parer l'attaque de l'ennemi et lui infliger une confusion importante."+
+          "\nGagnez un point de Sucre à chaque parade réussie."+
+          "\n**[Le personnages est invulnérable pendant l'utilisation]**"
+        ]
+      }
     ],
 
     playstyle: [
