@@ -1,13 +1,13 @@
 // src/components/CharacterInfo.jsx
 import ReactMarkdown from "react-markdown";
 import remarkGfm from "remark-gfm";
-import rehypeRaw from "rehype-raw"; // ✅ NEW: autorise le HTML inline (<span style="...">)
+import rehypeRaw from "rehype-raw"; // ✅ autorise le HTML inline (<span style="...">, <u>, etc.)
 
-// Petits helpers pour rendre du Markdown (avec HTML inline autorisé)
+// Helpers Markdown (block / inline)
 const MdBlock = ({ children, className = "" }) => (
   <ReactMarkdown
     remarkPlugins={[remarkGfm]}
-    rehypePlugins={[rehypeRaw]} // ✅ rend <span style="">, <b>, etc.
+    rehypePlugins={[rehypeRaw]}
     components={{
       p: ({ node, ...props }) => (
         <p {...props} className={`leading-relaxed ${className}`} />
@@ -21,9 +21,9 @@ const MdBlock = ({ children, className = "" }) => (
 const MdInline = ({ children, className = "" }) => (
   <ReactMarkdown
     remarkPlugins={[remarkGfm]}
-    rehypePlugins={[rehypeRaw]} // ✅ idem pour l’inline
+    rehypePlugins={[rehypeRaw]}
     components={{
-      p: ({ node, ...props }) => <span {...props} className={className} />, // inline
+      p: ({ node, ...props }) => <span {...props} className={className} />,
       br: ({ node, ...props }) => <br {...props} />,
     }}
   >
@@ -59,7 +59,6 @@ export default function CharacterInfo({ data }) {
   const renderDesc = (desc) => {
     if (!desc) return null;
     if (typeof desc === "string") {
-      // ✅ Markdown + HTML inline (ex: <span style="color:#f87171;">mot</span>)
       return <MdInline className="text-neutral-300">{desc}</MdInline>;
     }
     if (Array.isArray(desc)) {
@@ -87,12 +86,11 @@ export default function CharacterInfo({ data }) {
       {(title || summary) && (
         <div className="rounded-xl border border-neutral-800 bg-[#111215] p-4">
           {title && (
-            <h3 className="mb-2 text-lg font-bold text-white">{title}</h3>
+            <h3 className="mb-2 text-lg font-bold text-white">
+              <MdInline>{title}</MdInline>
+            </h3>
           )}
-          {summary && (
-            // ✅ Summary en Markdown + HTML inline
-            <MdBlock className="text-neutral-300">{summary}</MdBlock>
-          )}
+          {summary && <MdBlock className="text-neutral-300">{summary}</MdBlock>}
         </div>
       )}
 
@@ -108,7 +106,9 @@ export default function CharacterInfo({ data }) {
                 className="flex items-center justify-between gap-3 rounded-lg border border-neutral-800 bg-[#0f0f10] px-3 py-2"
               >
                 <dt className="text-neutral-400">{k}</dt>
-                <dd className="font-semibold text-neutral-100">{v}</dd>
+                <dd className="font-semibold text-neutral-100">
+                  <MdInline>{String(v)}</MdInline>
+                </dd>
               </div>
             ))}
           </dl>
@@ -174,9 +174,11 @@ export default function CharacterInfo({ data }) {
                     />
                   )}
                   <div className="flex-1">
-                    <div className="font-semibold text-white">{s.name}</div>
+                    <div className="font-semibold text-white">
+                      <MdInline>{s.name}</MdInline>
+                    </div>
                     <div className="text-xs text-neutral-400 mb-1">
-                      {s.type}
+                      <MdInline>{s.type}</MdInline>
                     </div>
                     {s.desc && (
                       <p className="text-neutral-300 leading-relaxed whitespace-pre-line">
@@ -215,16 +217,18 @@ export default function CharacterInfo({ data }) {
                 key={`${c.name}-${i}`}
                 className="rounded-lg border border-neutral-800 bg-[#0f0f10] p-3"
               >
-                <div className="font-semibold text-white">{c.name}</div>
+                <div className="font-semibold text-white">
+                  <MdInline>{c.name}</MdInline>
+                </div>
                 {c.input && (
                   <div className="mt-1 rounded-md bg-black/40 px-2 py-1 text-xs text-neutral-200">
                     {c.input}
                   </div>
                 )}
                 {c.notes && (
-                  <p className="mt-2 text-neutral-300 leading-relaxed">
-                    {c.notes}
-                  </p>
+                  <div className="mt-2 text-neutral-300 leading-relaxed">
+                    <MdBlock>{c.notes}</MdBlock>
+                  </div>
                 )}
               </li>
             ))}
@@ -239,7 +243,9 @@ export default function CharacterInfo({ data }) {
           </h4>
           <ol className="list-decimal pl-5 space-y-1 text-neutral-300">
             {rotation.map((r, i) => (
-              <li key={i}>{r}</li>
+              <li key={i}>
+                <MdInline>{r}</MdInline>
+              </li>
             ))}
           </ol>
         </div>

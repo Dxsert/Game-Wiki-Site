@@ -45,18 +45,18 @@ const ZZZ_OVERRIDES = {
 
     skills: [
       {
-        name: "Attaque normale — Ouverture céleste",
+        name: "<u>Attaque normale — Ouverture céleste</u>",
         desc: "Enchainement de 5 entailles frontales, infligeant des <span style='color:#f2b600'>****DGT physiques****</span>. Lorsque Alice inglige Assaut à l'aide de l'accumulation d'anomalie, le 5e coup de sa prochaine attaque normale sera renforcé.",
       },
       {
-        name: "Attaque normale - Valse de la Brillance stellaire",
+        name: "<u>Attaque normale - Valse de la Brillance stellaire</u>",
         desc:
           "Alice consomme jusqu’à 3 barres de Rite de l’épée pour charger une attaque infligeant des <span style='color:#f2b600'>****DGT physiques****</span> dont la puissance dépend du niveau de charge." +
           "Au Niv. 3, l’attaque finale déclenche Assaut polarisé, infligeant 100 % de DGT d’Assaut et pouvant provoquer un Dysfonctionnement." +
           "\n**[Le personnage est invulnérable pendant l’utilisation]**",
       },
       {
-        name: "Esquive - Agilité lapine",
+        name: "<u>Esquive - Agilité lapine</u>",
         desc: [
           "Appuyez sur",
           { type: "icon", name: "esquive" },
@@ -64,7 +64,7 @@ const ZZZ_OVERRIDES = {
         ],
       },
       {
-        name: "Attaque de bond - Bourrasque de l'épée dansante",
+        name: "<u>Attaque de bond - Bourrasque de l'épée dansante</u>",
         desc: [
           "Appuyez sur",
           { type: "icon", name: "basicattack" },
@@ -72,7 +72,7 @@ const ZZZ_OVERRIDES = {
         ],
       },
       {
-        name: "Contre d'esquive - Cérémonie de l'épée lumineus",
+        name: "<u>Contre d'esquive - Cérémonie de l'épée lumineus</u>",
         desc: [
           "Appuyez sur",
           { type: "icon", name: "basicattack" },
@@ -80,7 +80,7 @@ const ZZZ_OVERRIDES = {
         ],
       },
       {
-        name: "Soutien rapide - Incisions imbriquées",
+        name: "<u>Soutien rapide - Incisions imbriquées</u>",
         desc: [
           "Lorsque le personnage contrôlé est projeté, appuyez sur",
           { type: "icon", name: "assist" },
@@ -88,7 +88,7 @@ const ZZZ_OVERRIDES = {
         ],
       },
       {
-        name: "Soutien défensif - Garde de parade",
+        name: "<u>Soutien défensif - Garde de parade</u>",
         desc: [
           "Lorsque le personnage sur le terrain est sur le point d’être attaqué, appuyez sur",
           { type: "icon", name: "assist" },
@@ -96,7 +96,7 @@ const ZZZ_OVERRIDES = {
         ],
       },
       {
-        name: "Soutien de suivi - Riposte en croix",
+        name: "<u>Soutien de suivi - Riposte en croix</u>",
         desc: [
           "Appuyez sur",
           { type: "icon", name: "assist" },
@@ -104,17 +104,17 @@ const ZZZ_OVERRIDES = {
         ],
       },
       {
-        name: "Attaque spéciale - Aube perçante",
+        name: "<u>Attaque spéciale - Aube perçante</u>",
         desc: [
           "Appuyez sur",
-          { type: "icon", name: "specialattack" },
+          { type: "icon", name: "specialattack1" },
           "pour projeter l’épée et traverser les ennemis en face, leur infligeant des <span style='color:#f2b600'>**DGT physiques**</span>. Lors de l’activation, il est possible de déclencher une esquive parfaite. En cas d’esquive parfaite grâce à cette compétence, appuyez sur",
           { type: "icon", name: "basicattack" },
           "pour enchaîner directement avec le 5ᵉ coup de l’attaque normale (Ouverture céleste). \n**[Le personnage est invulnérable pendant l’utilisation]**",
         ],
       },
       {
-        name: "Attaque spéciale EX - Percée de l'aurore - Croix du Nord",
+        name: "<u>Attaque spéciale EX - Percée de l'aurore - Croix du Nord</u>",
         desc: [
           "Avec suffisamment d’énergie, placer le stick vers l’avant (Z) et appuyer sur",
           { type: "icon", name: "specialattack" },
@@ -122,7 +122,7 @@ const ZZZ_OVERRIDES = {
         ],
       },
       {
-        name: "Attaque spéciale EX - Percée de l'aurore - Croix du Sud",
+        name: "<u>Attaque spéciale EX - Percée de l'aurore - Croix du Sud</u>",
         desc: [
           "Avec suffisamment d’énergie, placer le stick au centre ou en arrière (S) et appuyer sur",
           { type: "icon", name: "specialattack" },
@@ -130,13 +130,13 @@ const ZZZ_OVERRIDES = {
         ],
       },
       {
-        name: "Enchaînement - Intermission météore",
+        name: "<u>Enchaînement - Intermission météore</u>",
         desc: [
           "Assène plusieurs entailles puissantes, infligeant d’importants <span style='color:#f2b600'>**DGT physiques**</span>. \n**[Le personnage est invulnérable pendant l’utilisation]**",
         ],
       },
       {
-        name: "Ultime - Grand final météore",
+        name: "<u>Ultime - Grand final météore</u>",
         desc: [
           "Assène plusieurs entailles puissantes consécutives sur les ennemis dans une large zone, infligeant d’importants <span style='color:#f2b600'>**DGT physiques**</span>. Cette compétence génère 200 pts de Rite de l’épée. \n[Vous n’accumulez pas de Rite de l’épée] \n**[Le personnage est invulnérable pendant l’utilisation]**",
         ],
@@ -219,13 +219,13 @@ const ZZZ_OVERRIDES = {
 
     skills: [
       {
-        name: "Attaque normale - Griffes de tanuki",
+        name: "<u>Attaque normale - Griffes de tanuki</u>",
         desc: [
           "Enchainement de 5 frappes frontales, infligeant des <span style='color:#f2b600'>**DGT physiques**</span>.",
         ],
       },
       {
-        name: "Attaque normale - Manteau de tanuki",
+        name: "<u>Attaque normale - Manteau de tanuki</u>",
         desc: [
           "Maintenez",
           { type: "icon", name: "basicattack" },
@@ -233,7 +233,7 @@ const ZZZ_OVERRIDES = {
         ],
       },
       {
-        name: "Attaque normal - Tir de praline",
+        name: "<u>Attaque normal - Tir de praline</u>",
         desc: [
           "Pendant que vous contrôlez un autre personnage et que Yuzuha dispose d’au moins 1 point de Sucre, celle-ci peut lancer une attaque off-field infligeant des <span style='color:#f2b600'>**DGT physiques**</span>. " +
             "Si l’Attaque Lourde Tir de Praline touche un ennemi, Yuzuha regagne 1 point de Sucre.\n" +
@@ -243,23 +243,23 @@ const ZZZ_OVERRIDES = {
         ],
       },
       {
-        name: "Attaque normal - Sucreries d'artifice",
+        name: "<u>Attaque normal - Sucreries d'artifice</u>",
         desc: [
           "Les ennemis souffrant de l’effet **Frayeur sucrée** subissent une instance de **Sucreries d’artifice** toutes les 1 s, leur infligeant des <span style='color:#f2b600'>****DGT physiques****</span>." +
             "\nL’accumulation d’Anomalie ne contribue pas au calcul des DGT d’Anomalie." +
-            "\nLe taux d’accumulation d’Anomalie augmente de <span style='color:#1bb500'>8,5%</span>.",
+            "\nLe taux d’accumulation d’Anomalie augmente de <span style='color:#1bb500'>**8,5%**</span>.",
         ],
       },
       {
-        name: "Attaque normal - Sucreries d'artifice - MAX",
+        name: "<u>Attaque normal - Sucreries d'artifice - MAX</u>",
         desc: [
           "Les ennemis souffrant de l’effet <b>Frayeur sucrée</b> subissent une instance de **Sucreries d’artifice** toutes les 1 s, leur infligeant des <span style='color:#f2b600'>**DGT physiques**</span> s’ils subissent une Attaque Lourde **Tir de Praline** ou une attaque de suivi." +
             "\nL’accumulation d’Anomalie ne contribue pas au calcul des DGT d’Anomalie." +
-            "\nLe taux d’accumulation d’Anomalie augmente de <span style='color:#1bb500'>8,5%</span>.",
+            "\nLe taux d’accumulation d’Anomalie augmente de <span style='color:#1bb500'>**8,5%**</span>.",
         ],
       },
       {
-        name: "Attaque normal - Assistant tanuki",
+        name: "<u>Attaque normal - Assistant tanuki</u>",
         desc: [
           "Lorsque Yuzuha est off-field, Kama aide le personnage contrôlé en infligeant des <span style='color:#f2b600'>**DGT physiques**</span>." +
             "\nQaund l’attaque Manteau de Tanuki est lancée, Kama assiste Yuzuha en attaquant les ennemis et inflige des <span style='color:#f2b600'>**DGT physiques**</span>." +
@@ -267,7 +267,7 @@ const ZZZ_OVERRIDES = {
         ],
       },
       {
-        name: "Esquive - Je t'ai fait peur ?",
+        name: "<u>Esquive - Je t'ai fait peur ?</u>",
         desc: [
           "Appuyez sur",
           { type: "icon", name: "esquive" },
@@ -276,7 +276,7 @@ const ZZZ_OVERRIDES = {
         ],
       },
       {
-        name: "Attaque de bon - Pas de bol !",
+        name: "<u>Attaque de bon - Pas de bol !</u>",
         desc: [
           "Appuyez sur",
           { type: "icon", name: "basicattack" },
@@ -284,7 +284,7 @@ const ZZZ_OVERRIDES = {
         ],
       },
       {
-        name: "Contre d'esquive - L'heure des représailles a sonné !",
+        name: "<u>Contre d'esquive - L'heure des représailles a sonné !</u>",
         desc: [
           "Appuyez sur",
           { type: "icon", name: "basicattack" },
@@ -293,24 +293,100 @@ const ZZZ_OVERRIDES = {
         ],
       },
       {
-        name: "Soutien rapide - Un petit dessert ?",
+        name: "<u>Soutien rapide - Un petit dessert ?</u>",
         desc: [
           "Lorsque le personnage contrôlé est projeté, appuyez sur",
-          {type: "icon", name: "assist"},
-          "pour enchaîner sur avec une frappe infligeant des <span style='color:#f2b600'>**DGT physiques**</span>."+
-          "\n**[Le personnages est invulnérable pendant l'utilisation]**"
-        ]
+          { type: "icon", name: "assist" },
+          "pour enchaîner sur avec une frappe infligeant des <span style='color:#f2b600'>**DGT physiques**</span>." +
+            "\n**[Le personnages est invulnérable pendant l'utilisation]**",
+        ],
       },
       {
-        name: "Soutien défensif - Le plein de rigolade",
+        name: "<u>Soutien défensif - Le plein de rigolade</u>",
         desc: [
           "Lorsque le personnage sur le terrain est sur le point d'être attaqué, appuyez sur",
-          {type: "icon", name: "assist"},
-          "pour parer l'attaque de l'ennemi et lui infliger une confusion importante."+
-          "\nGagnez un point de Sucre à chaque parade réussie."+
-          "\n**[Le personnages est invulnérable pendant l'utilisation]**"
-        ]
-      }
+          { type: "icon", name: "assist" },
+          "pour parer l'attaque de l'ennemi et lui infliger une confusion importante." +
+            "\nGagnez **un point de Sucre** à chaque parade réussie." +
+            "\n**[Le personnages est invulnérable pendant l'utilisation]**",
+        ],
+      },
+      {
+        name: "<u>Soutien de suivi - On a des cookies</u>",
+        desc: [
+          "Après un soutien défensif ou une parade avec Manteau de tanuki, appuyez sur",
+          { type: "icon", name: "assist" },
+          "pour lancer un frappe et infliger des <span style='color:#f2b600'>**DGT physiques**</span>." +
+            "\n**[Le personnages est invulnérable pendant l'utilisation]**",
+        ],
+      },
+      {
+        name: "<u>Soutien de suivi - Tir de praline fourrée</u>",
+        desc: [
+          "Après un soutien défensif ou une parade avec Manteau de tanuki, appuyez sur",
+          { type: "icon", name: "assist" },
+          "au bon moment pour faire tournoyer l'ombrelle en continu avant de tiré un puissant projectile, infligeant des <span style='color:#f2b600'>**DGT physiques**</span>." +
+            "\n**[Le personnages est invulnérable pendant l'utilisation]**",
+        ],
+      },
+      {
+        name: "<u>Attaque spéciale - Bombardement gélatineux</u>",
+        desc: [
+          "Appuyez sur",
+          { type: "icon", name: "specialattack1" },
+          "pour lancer un tir de canon qui inflige des <span style='color:#f2b600'>**DGT physiques**</span>.",
+        ],
+      },
+      {
+        name: "<u>Attaque spéciale EX - Carie imminente</u>",
+        desc: [
+          "Avec suffisamment d'énergie, appuyez sur",
+          { type: "icon", name: "specialattack" },
+          "Pour lancer une bombe qui inflige des <span style='color:#f2b600'>**DGT physiques**</span>." +
+            "\nLorsque vous infligez une attaque lourde à un ennemin, ce dernier obtient l'état **Frayeur sucrée**." +
+            "\nGagne **2 points de sucre** à l'activation." +
+            "\n**[Le personnages est invulnérable pendant l'utilisation]**",
+        ],
+      },
+      {
+        name: "<u>Attaque spéciale EX - Urgences dentaires</u>",
+        desc: [
+          "Après un **Contre d'esquive - L'heure des représailles a sonné !**, **Soutien rapide - Un petit dessert?**," +
+            "\n**Soutien de suivi - On a des cookies**, **Soutien de suivi - Tir de praline fourrée** ou une esquive parfaite, appuyez sur",
+          { type: "icon", name: "specialattack" },
+          "pour lancer rapidement une bombe qui inflige des <span style='color:#f2b600'>**DGT physiques**</span>." +
+            "\nLorsque vous infligez une attaque lourde à un ennemin, ce dernier obtient l'état **Frayeur sucrée**." +
+            "\nGagne **2 points de sucre** à l'activation." +
+            "\n**[Le personnages est invulnérable pendant l'utilisation]**",
+        ],
+      },
+      {
+        name: "<u>Passive - Frayeur sucrée</u>",
+        desc:
+          "L'état **Frayeur sucrée** dure <span style='color:#1bb500'>**18 s**</span>." +
+          "\n**[Les déclenchements répétés rénitialisent la durée]**" +
+          "\nLorsqu'un ennemi souffrant de **Frayeur sucrée** est touché pour la première fois par une attaque de l'attribut du personnage contrôlé, l'effet **Accord des saveurs** s'active." +
+          "\nCet effet change l'attribut de l'**Attaque normale : Sucreries d'artifice** et de l'**Attaque normale : Sucreries d'artifice - Max** pour correspondre à l'attribut du personnage, uniquement contre cette cible." +
+          "\nSi **Frayeur sucrée** est de nouveau infligé au même ennemi, l'effet précédent est supprimé, permettant de relancer la mécanique et de réattribuer l'attaque.",
+      },
+      {
+        name: "<u>Enchaînement - Déferlement de farces</u>",
+        desc: [
+          "Assène une puissante frappe infligeant d'importants <span style='color:#f2b600'>**DGT physiques**</span>." +
+            "\nGagne **1 point de Sucre** au lancement." +
+            "\n**[Le personnages est invulnérable pendant l'utilisation]**",
+        ],
+      },
+      {
+        name: "<u>Ultime - Capitule ou conséquences !</u>",
+        desc:
+          "Assène une puissante frappes dans une vaste zone, infligeant d'important <span style='color:#f2b600'>**DGT physiques**</span>." +
+          "\nLorsque vous infligez une attaque lourde à un ennemin, ce dernier obtient l'état **Frayeur sucrée**." +
+          "\nA l'activation les autres personnages gagnent <span style='color:#1bb500'>**8,5**</span> pts d'énergie." +
+          "\nGagne **2 points de sucre** à l'activation." +
+          "\nToucher un ennemi déclenche un soutien rapide." +
+          "\n**[Le personnages est invulnérable pendant l'utilisation]**",
+      },
     ],
 
     playstyle: [
