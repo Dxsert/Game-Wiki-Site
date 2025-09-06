@@ -28,3 +28,31 @@ body { background:#000; color:#fff; overflow:hidden }
 .movie-vignette-left{
   background: linear-gradient(90deg, rgba(0,0,0,.35) 0%, rgba(0,0,0,.28) 55%, rgba(0,0,0,0) 100%);
 }
+
+/* ---- Palette dégâts (modifiable une seule fois) ---- */
+:root{
+  --dgt-phys : #f2b600;
+  --dgt-elec : #0099dd;
+  --dgt-ether: #fa417c;
+  --dgt-ice  : #a7fffc;
+  --dgt-fire : #ff7a45;
+}
+
+/* ---- Utilitaires sémantiques ---- */
+.dgt       { font-weight: 700; }          /* gras cohérent */
+.dgt-phys  { color: var(--dgt-phys); }
+.dgt-elec  { color: var(--dgt-elec); }
+.dgt-ether { color: var(--dgt-ether); }
+.dgt-ice   { color: var(--dgt-ice); }
+.dgt-fire  { color: var(--dgt-fire); }
+
+/* Optionnel : léger glow lisible sur fond sombre */
+.dgt-glow  { text-shadow: 0 0 6px color-mix(in srgb, currentColor 40%, transparent); }
+
+/* Accessibilité */
+@media (prefers-contrast: more){
+  .dgt { text-decoration: underline; text-underline-offset: 2px; }
+}
+@media (forced-colors: active){
+  .dgt { color: ButtonText; }  /* évite un contraste mauvais en HCM */
+}
